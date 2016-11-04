@@ -31,3 +31,7 @@ h4 {
 li {
   font-size: 2em;
 }
+
+#pizza-details h3 {
+  margin-left: 3vw;
+}
