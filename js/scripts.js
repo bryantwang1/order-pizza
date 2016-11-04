@@ -24,16 +24,18 @@ Pizza.prototype.pricer = function() {
 // UI below this line.
 
 $(function() {
+var pizzaCounter = 1;
+$("div#result-area").append("<ul id=\"pizza-list\"></ul>");
+$("#page-headline").text("What would you like to order?");
 
-  $("form#new-pizza1").submit(function(event) {
+  $("form#new-pizza").submit(function(event) {
     event.preventDefault();
 
-    var pizzaSize = parseInt($("#pizza1-size").val());
+    var pizzaSize = parseInt($("#pizza-size").val());
 
     var pizza1 = new Pizza(pizzaSize);
-    console.log(pizza1.price);
 
-    $("input:checkbox[name=pizza1-toppings]:checked").each(function(){
+    $("input:checkbox[name=pizza-toppings]:checked").each(function(){
       if($(this).val() === "green-peppers") {
         pizza1.toppings.push("green bell peppers");
       } else {
@@ -42,12 +44,11 @@ $(function() {
     });
 
     pizza1.pricer();
+    var toppingsString = "";
 
-    $("#result-area").empty();
     if(pizza1.toppings.length === 0) {
-      $("#result-area").append("<h2>You chose a " + pizza1.size + "\" cheese pizza! Your price is: $" + pizza1.price + ".</h2>");
+
     } else {
-      var toppingsString = "";
       if(pizza1.toppings.length === 1) {
         toppingsString += pizza1.toppings[0];
       } else if (pizza1.toppings.length === 2) {
@@ -58,9 +59,39 @@ $(function() {
         }
         toppingsString += "and " + pizza1.toppings[pizza1.toppings.length-1];
       }
-      $("#result-area").append("<h2>You chose a " + pizza1.size + "\" pizza with " + toppingsString + "! Your price is: $" + pizza1.price + ".</h2>");
     }
+
+    $("ul#pizza-list").append("<li><span class=\"pizza\">Pizza " + pizzaCounter + "</span></li>")
+
+    $(".pizza").last().click(function() {
+      $("div#pizza-details").show();
+      $("#pizza-size-display").text("Your pie size is " + pizza1.size + "\".")
+
+      if(pizza1.toppings.length === 0) {
+        $("#pizza-toppings-display").text("Cheese only.");
+      } else if(pizza1.toppings.length === 1) {
+        $("#pizza-toppings-display").text("Your topping is " + toppingsString + ".");
+      } else {
+        $("#pizza-toppings-display").text("Your toppings are " + toppingsString + ".");
+      }
+
+      $("#pizza-price-display").text("Your price is $" + pizza1.price + ".");
+    })
+
+    $("form#new-pizza").hide();
+    $("button#another-pizza").show();
+    $("#page-headline").text("Click a pizza to show its details.");
+
+    pizzaCounter++;
   });
 
+  $("button#another-pizza").click(function() {
+    $("form#new-pizza").show();
+    $("button#another-pizza").hide();
+    $("div#pizza-details").hide();
+    $("#page-headline").text("What would you like to order?");
+    $("input:checkbox").prop('checked', false);
+    $("#pizza-size").val("8\"");
+  });
 
 });

@@ -10,10 +10,10 @@
   </head>
   <body>
     <div class="container">
-      <h1>What would you like to order?</h1>
-      <form id="new-pizza1">
+      <h1 id="page-headline"></h1>
+      <form id="new-pizza">
         <h3>What size of pizza would you like?</h3>
-        <select class="form-control drop-down" id="pizza1-size">
+        <select class="form-control drop-down" id="pizza-size">
           <option>8"</option>
           <option>10"</option>
           <option>12"</option>
@@ -23,75 +23,81 @@
         <h3>Which toppings would you like?</h3>
         <div class="flexer">
           <h4>Protein</h4>
-          <div class="form-group" id="pizza1-protein">
-            <input type="checkbox" name="pizza1-toppings" value="pepperoni">
+          <div class="form-group" id="pizza-protein">
+            <input type="checkbox" name="pizza-toppings" value="pepperoni">
             Pepperoni
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="sausage">
+            <input type="checkbox" name="pizza-toppings" value="sausage">
             Sausage
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="chicken">
+            <input type="checkbox" name="pizza-toppings" value="chicken">
             Chicken
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="bacon">
+            <input type="checkbox" name="pizza-toppings" value="bacon">
             Bacon
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="tuna">
+            <input type="checkbox" name="pizza-toppings" value="tuna">
             Tuna
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="prosciutto">
+            <input type="checkbox" name="pizza-toppings" value="prosciutto">
             Prosciutto
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="ham">
+            <input type="checkbox" name="pizza-toppings" value="ham">
             Ham
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="shrimp">
+            <input type="checkbox" name="pizza-toppings" value="shrimp">
             Shrimp
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="anchovy">
+            <input type="checkbox" name="pizza-toppings" value="anchovies">
             Anchovies
             <br>
           </div>
           <h4>Veggies</h4>
-          <div class="form-group" id="pizza1-veggie">
-            <input type="checkbox" name="pizza1-toppings" value="onions">
+          <div class="form-group" id="pizza-veggie">
+            <input type="checkbox" name="pizza-toppings" value="onions">
             Onions
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="mushrooms">
+            <input type="checkbox" name="pizza-toppings" value="mushrooms">
             Mushrooms
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="jalapenos">
+            <input type="checkbox" name="pizza-toppings" value="jalapenos">
             Jalapeños
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="green-peppers">
+            <input type="checkbox" name="pizza-toppings" value="green-peppers">
             Green Bell Peppers
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="peperoncini">
+            <input type="checkbox" name="pizza-toppings" value="peperoncini">
             Peperoncini
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="spinach">
+            <input type="checkbox" name="pizza-toppings" value="spinach">
             Spinach
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="olives">
+            <input type="checkbox" name="pizza-toppings" value="olives">
             Olives
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="broccoli">
+            <input type="checkbox" name="pizza-toppings" value="broccoli">
             Broccoli
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="garlic">
+            <input type="checkbox" name="pizza-toppings" value="garlic">
             Garlic
             <br>
-            <input type="checkbox" name="pizza1-toppings" value="basil">
+            <input type="checkbox" name="pizza-toppings" value="basil">
             Basil
             <br>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Make my pizza!</button>
+        <button type="submit" class="btn btn-primary" id="make-pizza">Make my pizza!</button>
       </form>
+      <button type="button" class="btn btn-success" id="another-pizza">Add another pizza.</button>
 
       <div id="result-area">
 
+      </div>
+      <div id="pizza-details">
+        <h3 id="pizza-size-display"></h3>
+        <h3 id="pizza-toppings-display"></h3>
+        <h3 id="pizza-price-display"></h3>
       </div>
 
     </div>

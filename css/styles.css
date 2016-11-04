@@ -10,3 +10,24 @@ h4 {
   margin-right: 20px;
   margin-left: 20px;
 }
+
+#another-pizza, #pizza-details {
+  display: none;
+}
+
+.pizza {
+  cursor: pointer;
+  color: orange;
+}
+
+.pizza:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 2em;
+}
