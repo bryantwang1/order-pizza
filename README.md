@@ -26,6 +26,9 @@ Output: ["pepperoni", "sausage", "onion"]_
 * _The program can use a prototype method to generate a price for a pizza object.
 Input: pizza1.price()
 Output: $15_
+* _The program displays the created pizza description as well as its price..
+Input: user selects 10", pepperoni, sausage, onions
+Output: page tells the user they made a 10" pizza with pepperoni, sausage, and onions, and the price is $15_
 * _The program can allow users to order more than one pizza.
 Input: user selects "3" from a drop-down menu
 Output: page adds 2 more identical forms under the first one_
