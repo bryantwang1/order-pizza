@@ -30,8 +30,11 @@ Output: $15_
 Input: user selects 10", pepperoni, sausage, onions
 Output: page tells the user they made a 10" pizza with pepperoni, sausage, and onions, and the price is $15_
 * _The program can allow users to order more than one pizza.
-Input: user selects "3" from a drop-down menu
-Output: page adds 2 more identical forms under the first one_
+Input: user clicks "add another pizza" button
+Output: user is able to use form to add another pizza_
+* _The program can store each pizza a user orders.
+Input: user clicks "add another pizza" button and submits the form again
+Output: program lists first pizza and second pizza_
 
 ## Setup/Installation Requirements
 
