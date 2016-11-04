@@ -14,7 +14,21 @@ https://bryantwang1.github.io/order-pizza
 
 ## Specs
 
-* __
+* _The program can allow the user to select a pizza size.
+Input: user selects 12" from the drop-down menu
+Output: you chose a 12" pizza_
+* _The program can allow the user to choose one or more toppings.
+Input: user checks off pepperoni, sausage, and onion
+Output: you chose pepperoni, sausage, and onion_
+* _The program can take the user's input and create a pizza object containing the information.
+Input: pizza1.toppings
+Output: ["pepperoni", "sausage", "onion"]_
+* _The program can use a prototype method to generate a price for a pizza object.
+Input: pizza1.price()
+Output: $15_
+* _The program can allow users to order more than one pizza.
+Input: user selects "3" from a drop-down menu
+Output: page adds 2 more identical forms under the first one_
 
 ## Setup/Installation Requirements
 

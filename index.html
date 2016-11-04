@@ -6,9 +6,90 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Order a Pizza</title>
   </head>
   <body>
+    <div class="container">
+      <h1>What would you like to order?</h1>
+      <form id="new-pizza1">
+        <h3>What size of pizza would you like?</h3>
+        <select class="form-control drop-down" id="pizza1-size">
+          <option>8"</option>
+          <option>10"</option>
+          <option>12"</option>
+          <option>14"</option>
+          <option>18"</option>
+        </select>
+        <h3>Which toppings would you like?</h3>
+        <div class="flexer">
+          <h4>Protein</h4>
+          <div class="form-group" id="pizza1-protein">
+            <input type="checkbox" name="pizza1-protein" value="pepperoni">
+            Pepperoni
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="sausage">
+            Sausage
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="shrimp">
+            Chicken
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="bacon">
+            Bacon
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="tuna">
+            Tuna
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="prosciutto">
+            Prosciutto
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="tuna">
+            Ham
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="shrimp">
+            Shrimp
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="anchovy">
+            Anchovies
+            <br>
+          </div>
+          <h4>Vegetables</h4>
+          <div class="form-group" id="pizza1-veggie">
+            <input type="checkbox" name="pizza1-veggie" value="onion">
+            Onions
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="mushroom">
+            Mushrooms
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="jalapeno">
+            Jalapeños
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="green-pepper">
+            Green Bell Peppers
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="peperoncini">
+            Peperoncini
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="spinach">
+            Spinach
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="olive">
+            Olives
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="broccoli">
+            Broccoli
+            <br>
+            <input type="checkbox" name="pizza1-veggie" value="garlic">
+            Garlic
+            <br>
+            <input type="checkbox" name="pizza1-protein" value="basil">
+            Basil
+            <br>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Make my pizza!</button>
+      </form>
+    </div>
 
   </body>
 </html>
