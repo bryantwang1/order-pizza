@@ -1,21 +1,24 @@
+function Pizza(size) {
+  this.size = size;
+  this.toppings = [];
+}
+
+// UI below this line.
+
 $(function() {
-  var pizza1Proteins = [];
-  var pizza1Veggies = [];
 
   $("#new-pizza1").submit(function(event) {
     event.preventDefault;
 
     var pizzaSize = parseInt($("#pizza1-size").val());
 
-    $("input:checkbox[name=pizza1-protein]:checked").each(function(){
-    pizza1Proteins.push($(this).val());
+    var pizza1 = new Pizza(pizzaSize);
+
+    $("input:checkbox[name=pizza1-toppings]:checked").each(function(){
+    pizza1.toppings.push($(this).val());
     });
 
-    $("input:checkbox[name=pizza1-veggie]:checked").each(function(){
-    pizza1Veggies.push($(this).val());
-    });
-
-    alert("You chose a " + pizzaSize + "\" pizza with " + pizza1Proteins + " and " + pizza1Veggies + "!");
+    alert("You chose a " + pizza1.size + "\" pizza with " + pizza1.toppings + "!");
   });
 
 
